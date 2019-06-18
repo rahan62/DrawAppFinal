@@ -1,9 +1,25 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab Two
+      Çekiliş Yarat
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card size-md="6">
+    <ion-card-header>
+      <ion-row>
+        <ion-input placeholder="İsminiz" [(ngModel)]="name"></ion-input>
+        <ion-input placeholder="Soyisminiz" [(ngModel)]="surname"></ion-input>
+      </ion-row>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-input placeholder="Çekilişin yapılacağı paylaşım linki" [(ngModel)]="url"></ion-input>
+        <ion-input placeholder="Gerekli Hashtag"></ion-input>
+        <ion-datetime [(ngModel)]="finalDate"></ion-datetime>
+        <ion-input placeholder="Toplam Katılımcı Sayısı" [(ngModel)]="maxContestant"></ion-input>
+        <ion-input placeholder="Ödül İsmi" [(ngModel)]="reward"></ion-input>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
