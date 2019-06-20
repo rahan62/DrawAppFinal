@@ -13,13 +13,27 @@ export class Tab2Page {
   public finalDate: any;
   public url = '';
   public reward = '';
+  public draw: any;
+  public hashtag = '';
+  public drawName = '';
+  public postURL = '';
   constructor(public db: AngularFireDatabase) {
 
   }
-  // saveDraw() {
-  //   this.draw = {
-  //     ''
-  //   }
-  // }
+  saveDraw() {
+    this.draw = {
+      name: this.name,
+      surname: this.surname,
+      maxContestant: this.maxContestant,
+      finalDate: this.finalDate,
+      url: this.url,
+      reward: this.reward,
+      hashtag: this.hashtag,
+      drawName: this.drawName,
+      postURL: this.postURL
+    };
+    this.db.list('draws').push(this.draw);
+    alert('Çekiliş Başarıyla oluşturuldu');
+  }
 
 }

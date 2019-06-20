@@ -1,25 +1,64 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>
-      Çekiliş Yarat
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-title>
+            Çekiliş Yarat
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card size-md="6">
-    <ion-card-header>
-      <ion-row>
-        <ion-input placeholder="İsminiz" [(ngModel)]="name"></ion-input>
-        <ion-input placeholder="Soyisminiz" [(ngModel)]="surname"></ion-input>
-      </ion-row>
-    </ion-card-header>
-    <ion-card-content>
-        <ion-input placeholder="Çekilişin yapılacağı paylaşım linki" [(ngModel)]="url"></ion-input>
-        <ion-input placeholder="Gerekli Hashtag"></ion-input>
-        <ion-datetime [(ngModel)]="finalDate"></ion-datetime>
-        <ion-input placeholder="Toplam Katılımcı Sayısı" [(ngModel)]="maxContestant"></ion-input>
-        <ion-input placeholder="Ödül İsmi" [(ngModel)]="reward"></ion-input>
-    </ion-card-content>
-  </ion-card>
+    <ion-grid>
+        <ion-row justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="3" size-xs="12">
+                <ion-card>
+                    <ion-card-header>
+                        <ion-item>
+                            <ion-label>İsminiz</ion-label>
+                            <ion-input [(ngModel)]="name"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Soyisminiz</ion-label>
+                            <ion-input [(ngModel)]="surname"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Çekişil Adı</ion-label>
+                            <ion-input [(ngModel)]="drawName"></ion-input>
+                        </ion-item>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-item>
+                            <ion-label>Gerekli Hashtag</ion-label>
+                            <ion-input [(ngModel)]="hashtag"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Geçerlilik Tarihini Seçiniz</ion-label>
+                            <ion-datetime [(ngModel)]="finalDate"></ion-datetime>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Toplam Katılımcı Sayısı</ion-label>
+                            <ion-input [(ngModel)]="maxContestant"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Ödül İsmi</ion-label>
+                            <ion-input [(ngModel)]="reward"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Resim Linki</ion-label>
+                            <ion-input [(ngModel)]="postURL"></ion-input>
+                        </ion-item>
+                    </ion-card-content>
+                    <ion-card-subtitle >
+                        <ion-grid>
+                            <ion-row justify-content-center="">
+                                <ion-button (click)="saveDraw()">
+                                    Onayla
+                                </ion-button>
+                            </ion-row>
+                        </ion-grid>
+
+                    </ion-card-subtitle>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

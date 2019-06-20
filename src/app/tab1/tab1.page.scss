@@ -2,3 +2,29 @@
   max-height: 35vh;
   overflow: hidden;
 }
+ion-card {
+  height: 500px;
+  width: 400px;
+  --background: #ffb3eb;
+}
+ion-card-header {
+  border-bottom: 2px solid #ff00ea;
+  --background: #ff00ea;
+  color: #ffffff;
+}
+ion-card-subtitle {
+  border-top: 2px solid #ff00ea;
+  background: #ffb3eb !important;
+}
+ion-card-content {
+  background: #ffb3eb;
+}
+ion-img {
+  background: #ffb3eb;
+}
+.bright-ping-bg {
+  background: #ffb3eb;
+}
+.ionitem-pink-bg {
+  --background: #ffb3eb;
+}
