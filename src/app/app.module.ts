@@ -14,10 +14,17 @@ import {firebaseConfig} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 
+import {UsersModalPageModule} from './users-modal/users-modal.module';
+
 @NgModule({
     declarations: [AppComponent],
     entryComponents: [],
-    imports: [BrowserModule, IonicModule.forRoot(), AngularFireModule.initializeApp(firebaseConfig), AngularFireDatabaseModule, AppRoutingModule],
+    imports: [BrowserModule,
+        IonicModule.forRoot(),
+        UsersModalPageModule,
+        AngularFireModule.initializeApp(firebaseConfig),
+        AngularFireDatabaseModule,
+        AppRoutingModule],
     providers: [
         StatusBar,
         SplashScreen,
